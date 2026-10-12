@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>菊厂放置 · 打工人摸鱼模拟器</title>
+<meta name="description" content="一款上班族主题的放置类游戏：7 大岗位战斗、8 项业余爱好、100 级技能成长。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="boot" class="boot">
+  <div class="boot-logo">💼</div>
+  <div class="boot-title">菊厂放置</div>
+  <div class="boot-sub">正在打卡上班…</div>
+</div>
+
+<div id="app" class="app hidden">
+  <!-- ==================== 顶栏 ==================== -->
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+    <div class="brand"><span class="brand-icon">💼</span><span class="brand-text">菊厂放置</span></div>
+
+    <div class="vitals">
+      <div class="vital hp-vital" title="精力值：战斗中归零就会被抬走">
+        <span class="vital-icon">❤️</span>
+        <div class="vital-body">
+          <div class="vital-num"><span id="hpNow">0</span> / <span id="hpMax">0</span></div>
+          <div class="bar bar-hp"><i id="hpBar"></i></div>
+        </div>
+      </div>
+      <div class="vital" title="工资：主要货币">
+        <span class="vital-icon">💴</span><span class="vital-num" id="goldNum">0</span>
+      </div>
+      <div class="vital" title="摸鱼点：开启摸鱼增益消耗">
+        <span class="vital-icon">🐟</span><span class="vital-num" id="slackNum">0</span>
+      </div>
+      <div class="vital" title="背锅币：背锅商店货币">
+        <span class="vital-icon">🍳</span><span class="vital-num" id="coinNum">0</span>
+      </div>
+      <div class="vital" title="职场等级：综合战力">
+        <span class="vital-icon">🎖️</span><span class="vital-num">Lv <span id="cbLevel">1</span></span>
+      </div>
+    </div>
+
+    <div class="topbar-right">
+      <div class="status-chip" id="statusChip">摸鱼中</div>
+      <button class="icon-btn" id="saveBtn" title="立即存档">💾</button>
+    </div>
+  </header>
+
+  <!-- ==================== 主体 ==================== -->
+  <div class="body">
+    <nav class="sidebar" id="sidebar"></nav>
+    <main class="main" id="main"></main>
+  </div>
+
+  <!-- ==================== 底栏日志 ==================== -->
+  <footer class="logbar">
+    <div class="log-scroll" id="logList"></div>
+  </footer>
+</div>
+
+<!-- 浮动提示 -->
+<div id="toasts" class="toasts"></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

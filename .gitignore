@@ -1,0 +1,15 @@
+# 依赖 / 工具产物
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+
+# 抓取的 wiki 原始数据（体积大，且不属于游戏本体）
+_wiki_raw/
+
+# 本地临时脚本
+tools/_*.mjs

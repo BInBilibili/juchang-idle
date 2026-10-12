@@ -1,0 +1,24 @@
+{
+  "name": "juchang-idle",
+  "version": "1.0.0",
+  "description": "菊厂放置 —— 上班族主题的放置类网页游戏（玩法参考 Melvor Idle），纯前端零依赖",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve . -l 8080",
+    "gen": "node tools/gen-enemies.mjs",
+    "test": "node tools/test-ui.mjs && node tools/test-sim.mjs",
+    "test:ui": "node tools/test-ui.mjs",
+    "test:sim": "node tools/test-sim.mjs",
+    "test:prog": "node tools/test-progression.mjs rd 24"
+  },
+  "keywords": [
+    "idle",
+    "incremental",
+    "game",
+    "melvor",
+    "放置游戏",
+    "上班族"
+  ],
+  "license": "MIT"
+}
